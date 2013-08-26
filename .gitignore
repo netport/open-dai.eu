@@ -1,14 +1,7 @@
-lib-cov
-*.seed
-*.log
-*.csv
-*.dat
-*.out
-*.pid
-*.gz
 
-pids
-logs
-results
+# Composer manages Wordpress and vendor
+wordpress/
+vendor/
 
-npm-debug.log
+# Wordpress server details should never be included in version control
+wp-config.php
