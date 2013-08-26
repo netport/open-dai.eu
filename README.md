@@ -3,15 +3,15 @@ open-dai.eu
 
 Website for the Open-DAI project at open-dai.eu
 
-## Installation
+## Install Wordpress
 
-Install dependencies with [Composer](http://getcomposer.org):
+Dependencies are installed using [Composer](http://getcomposer.org):
 
 ```
-php composer install
+php composer.phar install
 ```
 
-Create your own wp-config.php in the project root:
+Create wp-config.php in the project root:
 
 ```
 cp wordpress/wp-config-sample.php ./wp-config.php
@@ -24,9 +24,26 @@ Configure wp-config.php with your database details. For development environments
  * Wordpress URLs
  * Configured to access Wordpress core in a separate folder
  */
-define('WP_HOME', 'http://' . $_SERVER['SERVER_NAME'] . '/wordpress');
-define('WP_SITEURL', 'http://' . $_SERVER['SERVER_NAME']);
 
-define( 'WP_CONTENT_URL', WP_HOME . '/assets' );
-define( 'WP_CONTENT_DIR', $_SERVER['DOCUMENT_ROOT'] . '/assets' );
+if ( !defined('WP_CONTENT_DIR') )
+  define( 'WP_CONTENT_DIR', dirname( __FILE__ ) . '/app' );
+  
+if ( !defined('WP_CONTENT_URL') )
+  define( 'WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/app' );
+
+/** Absolute path to the WordPress directory. */
+if ( !defined('ABSPATH') )
+  define('ABSPATH', dirname(__FILE__) . '/wordpress/');
 ```
+
+
+## Initialize theme
+
+This will install dependencies and generate assets in the theme folder:
+
+```
+cd app/themes/open-dai
+npm install
+grunt
+```
+
