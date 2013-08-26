@@ -1,7 +1,8 @@
 
-# Composer manages Wordpress and vendor
+# Composer manages Wordpress core, plugins and vendor libs
 wordpress/
 vendor/
+assets/plugins/
 
 # Wordpress server details should never be included in version control
 wp-config.php
