@@ -17,7 +17,7 @@ Create your own wp-config.php in the project root:
 cp wordpress/wp-config-sample.php ./wp-config.php
 ```
 
-Configure wp-config.php with your database details. For development environments it is recommended you set `define('WP_DEBUG', true)`. Because Wordpress runs from a separate directory you need to set different URLs for SITE and HOME:
+Configure wp-config.php with your database details. For development environments it is recommended you set `define('WP_DEBUG', true)`. You also need to set up some directories to run Wordpress from a separate directory:
 
 ```php
 /**
@@ -26,4 +26,7 @@ Configure wp-config.php with your database details. For development environments
  */
 define('WP_HOME', 'http://' . $_SERVER['SERVER_NAME'] . '/wordpress');
 define('WP_SITEURL', 'http://' . $_SERVER['SERVER_NAME']);
+
+define( 'WP_CONTENT_URL', WP_HOME . '/assets' );
+define( 'WP_CONTENT_DIR', $_SERVER['DOCUMENT_ROOT'] . '/assets' );
 ```
