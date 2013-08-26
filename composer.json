@@ -30,7 +30,7 @@
     "webroot-dir": "wordpress",
     "webroot-package": "wordpress",
     "installer-paths": {
-      "assets/plugins/{$name}/": ["type:wordpress-plugin"]
+      "app/plugins/{$name}/": ["type:wordpress-plugin"]
     }
   }
 }
