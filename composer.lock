@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "53da1542144318ce3f7de27ed79f0ab8",
+    "hash": "9a22e9ce922cede6eb184363db4bf41b",
     "packages": [
         {
             "name": "composer/installers",
@@ -135,10 +135,10 @@
         },
         {
             "name": "wpackagist/logged-in",
-            "version": "trunk",
+            "version": "1.0.4",
             "dist": {
                 "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/logged-in.zip",
+                "url": "http://downloads.wordpress.org/plugin/logged-in.1.0.4.zip",
                 "reference": null,
                 "shasum": null
             },
