@@ -26,3 +26,11 @@ add_action('after_setup_theme', 'roots_setup');
 
 // Backwards compatibility for older than PHP 5.3.0
 if (!defined('__DIR__')) { define('__DIR__', dirname(__FILE__)); }
+
+// Initialize the metabox class
+function be_initialize_cmb_meta_boxes() {
+  if ( !class_exists( 'cmb_Meta_Box' ) ) {
+    require_once( 'metabox/init.php' );
+  }
+}
+add_action( 'init', 'be_initialize_cmb_meta_boxes', 9999 );
