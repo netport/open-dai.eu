@@ -10,5 +10,7 @@
 
   <?php wp_head(); ?>
 
+  <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7770232/658242/css/fonts.css" />
+
   <link rel="alternate" type="application/rss+xml" title="<?php echo get_bloginfo('name'); ?> Feed" href="<?php echo home_url(); ?>/feed/">
 </head>
