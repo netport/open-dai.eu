@@ -27,13 +27,9 @@ Configure wp-config.php with your database details. For development environments
 
 if ( !defined('WP_CONTENT_DIR') )
   define( 'WP_CONTENT_DIR', dirname( __FILE__ ) . '/app' );
-  
+
 if ( !defined('WP_CONTENT_URL') )
   define( 'WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/app' );
-
-/** Absolute path to the WordPress directory. */
-if ( !defined('ABSPATH') )
-  define('ABSPATH', dirname(__FILE__) . '/wordpress/');
 ```
 
 
