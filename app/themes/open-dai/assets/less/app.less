@@ -42,6 +42,14 @@ body {
 
       background: url('../img/apple-touch-icon-60x60.png') @navbar-padding-horizontal center no-repeat;
       background-size: @logo-size;
+
+      .transition(~'padding-left 120ms ease-in-out, background-position 120ms ease-in-out');
+
+      // "Skinny" version of the logo, without the symbol
+      &.skinny {
+         padding-left: @navbar-padding-horizontal;
+         background-position: -@logo-size center;
+      }
    }
 
    // Float navigation to the right on large screens
@@ -50,6 +58,7 @@ body {
          .pull-right;
       }
    }
+
 
 }
 
