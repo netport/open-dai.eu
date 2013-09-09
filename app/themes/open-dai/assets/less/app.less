@@ -34,15 +34,8 @@ img {
 
 .banner {
 
-   // Animate navbar background-color on hover
-   &.navbar-default {
-      background-color: @jumbotron-bg;
-      .transition(~'background-color 90ms linear');
-
-      &:hover {
-         background-color: @navbar-default-bg;
-      }
-   }
+   background-color: @jumbotron-bg;
+   border-bottom-color: @jumbotron-bg;
 
    // Logotype in navbar
    .navbar-brand {
@@ -51,14 +44,6 @@ img {
 
       background: url('../img/apple-touch-icon-60x60.png') @navbar-padding-horizontal center no-repeat;
       background-size: @logo-size;
-
-      .transition(~'padding-left 120ms ease-in-out, background-position 120ms ease-in-out');
-
-      // "Skinny" version of the logo, without the symbol
-      &.js-jumbotron-visible {
-         padding-left: @navbar-padding-horizontal;
-         background-position: -@logo-size center;
-      }
    }
 
    // Float navigation to the right on large screens
@@ -68,6 +53,51 @@ img {
       }
    }
 
+}
+
+/**
+ * Animation in response to hover (on no-touch devices)
+ */
+html.no-touch.cssanimations .banner.navbar-default {
+
+   .transition(~'background-color 90ms linear, border-bottom-color 90ms linear');
+
+   &:hover {
+      background-color: @navbar-default-bg;
+      border-bottom-color: @navbar-default-border;
+   }
+}
+
+/**
+ * Response to jumbotron overlap
+ */
+.banner.js-jumbotron-overlap {
+
+   // Animate background color
+   &.navbar-default {
+      background-color: transparent;
+      border-bottom-color: transparent;
+   }
+}
+
+/**
+ * Animation in response to jumbotron visibility
+ */
+html.cssanimations .banner {
+
+   // Animate logo
+   .transition(~'background-color 120ms linear, border-bottom-color 120ms linear');
+   .navbar-brand {
+      .transition(~'color 120ms ease-in-out, padding-left 120ms ease-in-out, background-position 120ms ease-in-out');
+   }
+
+   &.js-jumbotron-visible {
+      .navbar-brand {
+         color: transparent;
+         padding-left: @navbar-padding-horizontal;
+         background-position: -@logo-size center;
+      }
+   }
 }
 
 

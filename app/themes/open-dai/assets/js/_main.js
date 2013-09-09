@@ -16,17 +16,25 @@ var OPENDAI = {
   home: {
     init: function() {
       $(window).scroll(function() {
-        // React when Jumbotron scrolls in and out
-        var scrollTop   = $(window).scrollTop();
-        var offset      = $('.jumbotron').offset();
-        var height      = $('.jumbotron').outerHeight();
-        var reactFactor = 0.55;
+        var scrollTop           = $(window).scrollTop();
+        var bannerHeight        = $('.banner').outerHeight();
+        var jumbotronOffset     = $('.jumbotron').offset();
+        var jumbotronHeight     = $('.jumbotron').outerHeight();
 
-        if (scrollTop < reactFactor * (height + offset.top)) {
-          $('.banner .navbar-brand').addClass('js-jumbotron-visible');
+        // Banner reaction to Jumbotron overlap
+        if (scrollTop > bannerHeight && scrollTop < (0.75 * (jumbotronHeight + jumbotronOffset.top))) {
+          $('.banner').addClass('js-jumbotron-overlap');
         } else {
-          $('.banner .navbar-brand').removeClass('js-jumbotron-visible');
+          $('.banner').removeClass('js-jumbotron-overlap');
         }
+
+        // Banner reaction to window scroll
+        if (scrollTop < (0.75 * (jumbotronHeight + jumbotronOffset.top))) {
+          $('.banner').addClass('js-jumbotron-visible');
+        } else {
+          $('.banner').removeClass('js-jumbotron-visible');
+        }
+
       });
     }
   },
