@@ -9,19 +9,15 @@
    ========================================================================== */
 
 @wpadminbar-height:     28px;
+@logo-size:             30px;
+
 
 body {
 
-   // Make space for fixed top navbar
+   // Make space for fixed top navbar and WP adminbar
    padding-top: @navbar-height;
-
-   &.admin-bar {
-
-      // Make space for fixed top navbar and WP adminbar
-      padding-top: (@navbar-height + @wpadminbar-height);
-      .navbar-fixed-top {
-         top: @wpadminbar-height;
-      }
+   &.admin-bar .navbar-fixed-top {
+      top: @wpadminbar-height;
    }
 }
 
@@ -31,9 +27,17 @@ body {
    Header
    ========================================================================== */
 
-@logo-size:             30px;
-
 .banner {
+
+   // Animate navbar background-color on hover
+   &.navbar-default {
+      background-color: @jumbotron-bg;
+      .transition(~'background-color 90ms linear');
+
+      &:hover {
+         background-color: @navbar-default-bg;
+      }
+   }
 
    // Logotype in navbar
    .navbar-brand {
@@ -58,7 +62,6 @@ body {
          .pull-right;
       }
    }
-
 
 }
 

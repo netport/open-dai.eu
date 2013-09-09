@@ -13,6 +13,12 @@
     }
   ?>
 
+  <?php
+    // Display the jumbotron on the front page
+    if (is_front_page())
+      get_template_part('templates/jumbotron');
+  ?>
+
   <div class="wrap container" role="document">
     <div class="content row">
       <div class="main <?php echo roots_main_class(); ?>" role="main">
