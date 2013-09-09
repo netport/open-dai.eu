@@ -31,7 +31,18 @@ body {
    Header
    ========================================================================== */
 
+@logo-size:             30px;
+
 .banner {
+
+   // Logotype in navbar
+   .navbar-brand {
+      font-weight: bold;
+      padding-left: (@navbar-padding-horizontal + @logo-size + @padding-small-horizontal);
+
+      background: url('../img/apple-touch-icon-60x60.png') @navbar-padding-horizontal center no-repeat;
+      background-size: @logo-size;
+   }
 
    // Float navigation to the right on large screens
    @media (min-width: @screen-sm) {
