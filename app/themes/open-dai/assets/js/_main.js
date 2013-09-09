@@ -1,6 +1,9 @@
 // Modified http://paulirish.com/2009/markup-based-unobtrusive-comprehensive-dom-ready-execution/
 // Only fires on body class (working off strictly WordPress body_class)
 
+// Please use "js-" prefix for css hooks
+// http://philipwalton.com/articles/decoupling-html-css-and-javascript/
+
 var OPENDAI = {
   // All pages
   common: {
@@ -20,9 +23,9 @@ var OPENDAI = {
         var reactFactor = 0.55;
 
         if (scrollTop < reactFactor * (height + offset.top)) {
-          $('.banner .navbar-brand').addClass('skinny');
+          $('.banner .navbar-brand').addClass('js-jumbotron-visible');
         } else {
-          $('.banner .navbar-brand').removeClass('skinny');
+          $('.banner .navbar-brand').removeClass('js-jumbotron-visible');
         }
       });
     }

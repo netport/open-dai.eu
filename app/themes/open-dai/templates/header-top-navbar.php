@@ -9,7 +9,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand <?php if(is_front_page()) echo 'skinny'; ?>" href="<?php echo home_url(); ?>/"><?php bloginfo('name'); ?></a>
+      <a class="navbar-brand <?php if(is_front_page()) echo 'js-jumbotron-visible'; ?>" href="<?php echo home_url(); ?>/"><?php bloginfo('name'); ?></a>
     </div>
 
     <nav class="collapse navbar-collapse" role="navigation">
