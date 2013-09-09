@@ -1,4 +1,6 @@
-<header class="banner navbar navbar-default navbar-static-top" role="banner">
+<?php $navbar_class = (current_theme_supports('bootstrap-fixed-navbar')) ? 'navbar-fixed-top' : 'navbar-static-top'; ?>
+
+<header class="banner navbar navbar-default <?php echo $navbar_class; ?>" role="banner">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">

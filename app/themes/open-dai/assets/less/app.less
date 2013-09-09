@@ -8,7 +8,22 @@
    Base
    ========================================================================== */
 
-body { }
+@wpadminbar-height:     28px;
+
+body {
+
+   // Make space for fixed top navbar
+   padding-top: @navbar-height;
+
+   &.admin-bar {
+
+      // Make space for fixed top navbar and WP adminbar
+      padding-top: (@navbar-height + @wpadminbar-height);
+      .navbar-fixed-top {
+         top: @wpadminbar-height;
+      }
+   }
+}
 
 
 
@@ -16,7 +31,16 @@ body { }
    Header
    ========================================================================== */
 
-.banner { }
+.banner {
+
+   // Float navigation to the right on large screens
+   @media (min-width: @screen-sm) {
+      nav {
+         .pull-right;
+      }
+   }
+
+}
 
 
 
