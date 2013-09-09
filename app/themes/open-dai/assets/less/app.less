@@ -60,9 +60,8 @@ img {
  */
 html.no-touch.cssanimations .banner.navbar-default {
 
-   .transition(~'background-color 90ms linear, border-bottom-color 90ms linear');
-
    &:hover {
+      .transition(~'background-color 90ms linear, border-bottom-color 90ms linear');
       background-color: @navbar-default-bg;
       border-bottom-color: @navbar-default-border;
    }
@@ -86,7 +85,6 @@ html.no-touch.cssanimations .banner.navbar-default {
 html.cssanimations .banner {
 
    // Animate logo
-   .transition(~'background-color 120ms linear, border-bottom-color 120ms linear');
    .navbar-brand {
       .transition(~'color 120ms ease-in-out, padding-left 120ms ease-in-out, background-position 120ms ease-in-out');
    }
