@@ -22,7 +22,7 @@ var OPENDAI = {
         var jumbotronHeight     = $('.jumbotron').outerHeight();
 
         // Banner reaction to Jumbotron overlap
-        if (scrollTop > bannerHeight && scrollTop < (0.75 * (jumbotronHeight + jumbotronOffset.top))) {
+        if (scrollTop < (0.75 * (jumbotronHeight + jumbotronOffset.top))) {
           $('.banner').addClass('js-jumbotron-overlap');
         } else {
           $('.banner').removeClass('js-jumbotron-overlap');

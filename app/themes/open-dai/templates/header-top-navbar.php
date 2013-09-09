@@ -9,8 +9,10 @@
   endif;
 
   // Add js hook for front page jumbotron
-  if (is_front_page())
+  if (is_front_page()) {
     $navbar_classes[] = 'js-jumbotron-visible';
+    $navbar_classes[] = 'js-jumbotron-overlap';
+  }
 ?>
 
 <header class="banner navbar navbar-default <?php echo implode(' ', $navbar_classes); ?>" role="banner">

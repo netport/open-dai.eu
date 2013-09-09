@@ -105,14 +105,18 @@ html.cssanimations .banner {
    ========================================================================== */
 
 .jumbotron {
+   // Responsive background pattern
    background-image: url('../img/bgpattern.png');
-   background-position: bottom center;
+   background-position: top center;
    background-repeat: no-repeat;
-
    @media (min-width: @container-lg-desktop) {
       background-size: contain;
    }
 
+   // Place underneath navbar
+   margin-top: -@navbar-height;
+
+   // Push lead text down
    .lead {
       margin-top: 44px;
       font-weight: bold;
