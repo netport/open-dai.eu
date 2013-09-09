@@ -15,25 +15,37 @@
 @gray-light:             lighten(#000, 60%);   // #999
 @gray-lighter:           lighten(#000, 93.5%); // #eee
 
+// Named Colors
+// -------------------------
+
+@pink:                  #DC1A59;
+@red:                   #EE4123;
+@yellow:                #F5BC17;
+@green:                 #73AA42;
+@cyan:                  #53BE9B;
+@blue:                  #4098D3;
+@purple:                #4652A3;
+
 // Brand colors
 // -------------------------
 
-@brand-primary:         #428bca;
-@brand-success:         #5cb85c;
-@brand-warning:         #f0ad4e;
-@brand-danger:          #d9534f;
-@brand-info:            #5bc0de;
+@brand-primary:         #F79420;
+@brand-success:         @green;
+@brand-warning:         @yellow;
+@brand-danger:          @red;
+@brand-info:            @cyan;
 
 // Scaffolding
 // -------------------------
 
-@body-bg:               #fff;
+@body-bg:               #fefefe;
 @text-color:            @gray-dark;
+@heading-color:         @gray-darker;
 
 // Links
 // -------------------------
 
-@link-color:            @brand-primary;
+@link-color:            @purple;
 @link-hover-color:      darken(@link-color, 15%);
 
 // Typography
@@ -52,7 +64,7 @@
 @line-height-computed:    floor(@font-size-base * @line-height-base); // ~20px
 
 @headings-font-family:    @font-family-base;
-@headings-font-weight:    500;
+@headings-font-weight:    bold;
 @headings-line-height:    1.1;
 
 // Iconography
