@@ -1,7 +1,29 @@
 <?php
+
 /**
- * Custom functions
+ * Add buttons and controls to TinyMCE
+ **/
+function oies_mce_buttons_2( $orig ) {
+    array_unshift($orig, 'styleselect');
+    return $orig;
+}
+add_filter( 'mce_buttons_2', 'oies_mce_buttons_2' );
+
+
+/**
+ * Add style formats to TineMCE styleselect
  */
+function mce_style_formats( $init_array ) {
+  $init_array['style_formats'] = json_encode(array(
+    array(
+      'title' => __('Lead', 'opendai'),
+      'classes' => 'lead',
+      'block' => 'p',
+    )
+  ));
+  return $init_array;
+}
+add_filter( 'tiny_mce_before_init', 'mce_style_formats' );
 
 
 /**
