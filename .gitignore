@@ -1,4 +1,8 @@
 
+# Composer binary
+# Not included in project but could be present for some users
+composer.phar
+
 # Composer manages Wordpress core, plugins and vendor libs
 /wordpress/
 /app/plugins/
