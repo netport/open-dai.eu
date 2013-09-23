@@ -16,7 +16,7 @@
         <?php foreach( $posts as $post ) : setup_postdata( $post ); ?>
         <a class="list-group-item" href="<?php the_permalink(); ?>" title="Read <?php the_title(); ?>">
         <h4 class="list-group-item-heading"><?php the_title(); ?></h4>
-        <p class="list-group-item-text"><span class="text-muted"><?php echo mysql2date('Y-m-d', $post->post_date); ?></span>&emsp;<?php the_excerpt(); ?></p>
+        <p class="list-group-item-text"><span class="text-muted"><?php echo mysql2date('Y-m-d', $post->post_date); ?></span>&emsp;<?php echo get_the_excerpt(); ?></p>
         </a>
         <?php endforeach; wp_reset_postdata(); ?>
       </div>
