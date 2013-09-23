@@ -167,7 +167,21 @@ html.cssanimations .banner {
    Footer
    ========================================================================== */
 
-.content-info { }
+.content-info {
+   border-top: 1px solid @hr-border;
+
+   margin-top: @padding-large-horizontal;
+   margin-bottom: @padding-large-horizontal;
+   padding-top: @padding-large-horizontal;
+   padding-bottom: @padding-large-horizontal;
+
+   // Logo images
+   img {
+      .pull-right;
+      margin-left: @padding-base-horizontal;
+      max-height: 120px;
+   }
+}
 
 
 
