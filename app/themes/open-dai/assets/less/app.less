@@ -136,7 +136,9 @@ html.cssanimations .banner {
    Primary Content
    ========================================================================== */
 
-.main { }
+.main {
+  margin-top: (2 * @padding-large-vertical);
+}
 
 /* Gallery Shortcode */
 .gallery-row { padding: 15px 0; }
@@ -147,7 +149,16 @@ html.cssanimations .banner {
    Sidebar
    ========================================================================== */
 
-.sidebar { }
+.sidebar {
+
+  // Roughly align top with page header border
+  margin-top: ((2 * @padding-large-vertical) + 100px);
+
+  // Push content down if thumbnail is present
+  .wp-post-image {
+    margin-bottom: @padding-large-vertical;
+  }
+}
 
 
 
