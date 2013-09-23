@@ -32,14 +32,6 @@
   </section><!-- /#comments -->
 <?php endif; ?>
 
-<?php if (!have_comments() && !comments_open() && !is_page() && post_type_supports(get_post_type(), 'comments')) : ?>
-  <section id="comments">
-    <div class="alert">
-      <?php _e('Comments are closed.', 'roots'); ?>
-    </div>
-  </section><!-- /#comments -->
-<?php endif; ?>
-
 <?php if (comments_open()) : ?>
   <section id="respond">
     <h3><?php comment_form_title(__('Leave a Reply', 'roots'), __('Leave a Reply to %s', 'roots')); ?></h3>
