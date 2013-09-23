@@ -7,7 +7,7 @@
   if ($cmb_category_id > -1) :
     $posts = get_posts(array(
       'category'          => $cmb_category_id,
-      'posts_per_page'    => 5
+      'posts_per_page'    => 3
     ));
     if ( !empty($posts) ) : ?>
     <div class="panel panel-default">
@@ -19,6 +19,9 @@
         <p class="list-group-item-text"><span class="text-muted"><?php echo mysql2date('Y-m-d', $post->post_date); ?></span>&emsp;<?php echo get_the_excerpt(); ?></p>
         </a>
         <?php endforeach; wp_reset_postdata(); ?>
+      </div>
+      <div class="panel-footer">
+        <p><a href="<?php echo esc_url( get_category_link( $cmb_category_id ) ); ?>" title="More articles">More &rsaquo;</a></p>
       </div>
     </div>
     <?php endif; endif; ?>
