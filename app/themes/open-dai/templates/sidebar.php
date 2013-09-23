@@ -9,13 +9,16 @@
       'category'          => $cmb_category_id,
       'posts_per_page'    => 5
     ));
-    if ( !empty($posts) ) :
-      echo '<ul class="list-unstyled">';
-      echo '<h2>Related news</h2>';
-      foreach($posts as $post) :
-        echo '<li><span class="pubdate">' . mysql2date('Y-m-d', $post->post_date) . '</span> <a href="' . get_permalink($post->ID) . '" title="Read ' . $post->post_title . '">' . $post->post_title . '</a></li>';
-      endforeach;
-      echo '</ul>';
-    endif;
-  endif;
-?>
+    if ( !empty($posts) ) : ?>
+    <div class="panel panel-default">
+      <div class="panel-heading">News articles</div>
+      <div class="list-group">
+        <?php foreach( $posts as $post ) : setup_postdata( $post ); ?>
+        <a class="list-group-item" href="<?php the_permalink(); ?>" title="Read <?php the_title(); ?>">
+        <h4 class="list-group-item-heading"><?php the_title(); ?></h4>
+        <p class="list-group-item-text"><span class="text-muted"><?php echo mysql2date('Y-m-d', $post->post_date); ?></span>&emsp;<?php the_excerpt(); ?></p>
+        </a>
+        <?php endforeach; wp_reset_postdata(); ?>
+      </div>
+    </div>
+    <?php endif; endif; ?>
