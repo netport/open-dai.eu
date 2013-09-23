@@ -11,3 +11,7 @@ composer.phar
 # Wordpress server details should never be included in version control
 .htaccess
 wp-config.php
+
+# Generated resources are ignored
+main.min.css
+scripts.min.js
