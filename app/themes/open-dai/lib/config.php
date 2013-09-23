@@ -14,7 +14,7 @@ add_theme_support('jquery-cdn');                // Enable to load jQuery from th
  * Configuration values
  */
 define('GOOGLE_ANALYTICS_ID', 'UA-43493095-1'); // UA-XXXXX-Y
-define('POST_EXCERPT_LENGTH', 40);
+define('POST_EXCERPT_LENGTH', 30);
 
 /**
  * .main classes
