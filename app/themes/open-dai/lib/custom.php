@@ -3,11 +3,11 @@
 /**
  * Add buttons and controls to TinyMCE
  **/
-function oies_mce_buttons_2( $orig ) {
+function mce_mce_buttons_2( $orig ) {
     array_unshift($orig, 'styleselect');
     return $orig;
 }
-add_filter( 'mce_buttons_2', 'oies_mce_buttons_2' );
+add_filter( 'mce_buttons_2', 'mce_mce_buttons_2' );
 
 
 /**
