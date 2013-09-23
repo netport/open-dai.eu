@@ -22,5 +22,3 @@
       </div>
     </div>
     <?php endif; endif; ?>
-
-<?php echo get_the_excerpt(); ?>
