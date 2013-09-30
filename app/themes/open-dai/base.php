@@ -15,12 +15,15 @@
 
   <?php
     // Display the jumbotron on the front page
-    if (is_front_page())
-      get_template_part('templates/jumbotron');
+    if (is_front_page()) get_template_part('templates/jumbotron');
   ?>
 
   <div class="wrap container" role="document">
-    <div class="languages row"><div class="col-sm-12"><?php wpml_language_selector_flags(); ?></div></div>
+    <div class="row">
+      <div class="<?php echo roots_main_class(); ?>">
+        <?php dynamic_sidebar('sidebar-languages'); ?>
+      </div>
+    </div>
     <div class="content row">
       <div class="main <?php echo roots_main_class(); ?>" role="main">
         <?php include roots_template_path(); ?>

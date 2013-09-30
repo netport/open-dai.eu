@@ -1,3 +1,4 @@
+
 <?php if ( has_post_thumbnail() ) the_post_thumbnail(array(360,360)); ?>
 
 <?php dynamic_sidebar('sidebar-primary'); ?>

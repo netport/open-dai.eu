@@ -1,6 +1,11 @@
 <?php
 
 /**
+ * WPML options
+ */
+define('ICL_DONT_LOAD_LANGUAGE_SELECTOR_CSS', true);
+
+/**
  * Add buttons and controls to TinyMCE
  **/
 function mce_mce_buttons_2( $orig ) {
@@ -74,24 +79,4 @@ function add_asset_rewrites($content) {
   );
   $wp_rewrite->non_wp_rules = array_merge($wp_rewrite->non_wp_rules, $new_non_wp_rules);
   return $content;
-}
-
-
-/**
- * URL rewrites
- */
-
-function wpml_language_selector_flags(){
-  $languages = icl_get_languages('skip_missing=0&orderby=code');
-  if(!empty($languages)){
-    echo '<ul class="wpml-languages">';
-    foreach($languages as $l){
-      echo '<li>';
-      if(!$l['active']) : echo '<a href="'.$l['url'].'" title="'.$l['native_name'].'">'; else : echo '<span>'; endif;
-      echo '<img src="'.$l['country_flag_url'].'" height="12" alt="'.$l['language_code'].'" width="18" />';
-      if(!$l['active']) : echo '</a>'; else : echo '</span>'; endif;
-      echo '</li>';
-    }
-    echo '</ul>';
-  }
 }

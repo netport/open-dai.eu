@@ -141,32 +141,6 @@ html.cssanimations .banner {
 }
 
 
-/* ==========================================================================
-   Language selector
-   ========================================================================== */
-
-.languages {
-  margin-top: (2 * @padding-large-vertical);
-
-  .wpml-languages {
-    .list-unstyled;
-    .pull-right;
-
-    // Buttonize flags
-    margin-right: -@padding-small-horizontal;
-
-    li {
-      display: inline-block;
-    }
-
-    a, span {
-      display: block;
-      padding: @padding-small-vertical @padding-small-horizontal;
-    }
-  }
-}
-
-
 
 /* ==========================================================================
    Content
@@ -239,6 +213,29 @@ html.cssanimations .banner {
 }
 
 
+
+/* ==========================================================================
+   WPML language selector
+   ========================================================================== */
+
+.lang_sel_list_horizontal {
+  margin: @padding-large-vertical 0;
+
+  // Bootstrap nav-tabs
+  ul {
+    .nav;
+    .nav-tabs;
+
+    // Active state
+    li a.lang_sel_sel {
+      color: @nav-tabs-active-link-hover-color;
+      background-color: @nav-tabs-active-link-hover-bg;
+      border: 1px solid @nav-tabs-active-link-hover-border-color;
+      border-bottom-color: transparent;
+      cursor: default;
+    }
+  }
+}
 
 /* ==========================================================================
    WordPress Generated Classes
