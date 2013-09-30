@@ -21,7 +21,7 @@ add_filter( 'mce_buttons_2', 'mce_mce_buttons_2' );
 function mce_style_formats( $init_array ) {
   $init_array['style_formats'] = json_encode(array(
     array(
-      'title' => __('Lead', 'opendai'),
+      'title' => 'Lead paragraph',
       'classes' => 'lead',
       'block' => 'p',
     )
