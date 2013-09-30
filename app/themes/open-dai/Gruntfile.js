@@ -49,6 +49,9 @@ module.exports = function(grunt) {
       }
     },
     watch: {
+      options: {
+        livereload: true,
+      },
       less: {
         files: [
           'assets/less/*.less',
