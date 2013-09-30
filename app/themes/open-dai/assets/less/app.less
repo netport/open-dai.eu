@@ -116,6 +116,9 @@ html.cssanimations .banner {
    // Place underneath navbar
    margin-top: -@navbar-height;
 
+   // Remove default bottom margin
+   margin-bottom: 0;
+
    // Push lead text down
    .lead {
       margin-top: 44px;
@@ -136,6 +139,33 @@ html.cssanimations .banner {
       }
    }
 }
+
+
+/* ==========================================================================
+   Language selector
+   ========================================================================== */
+
+.languages {
+  margin-top: (2 * @padding-large-vertical);
+
+  .wpml-languages {
+    .list-unstyled;
+    .pull-right;
+
+    // Buttonize flags
+    margin-right: -@padding-small-horizontal;
+
+    li {
+      display: inline-block;
+    }
+
+    a, span {
+      display: block;
+      padding: @padding-small-vertical @padding-small-horizontal;
+    }
+  }
+}
+
 
 
 /* ==========================================================================
