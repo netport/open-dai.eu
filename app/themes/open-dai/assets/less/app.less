@@ -121,6 +121,20 @@ html.cssanimations .banner {
       margin-top: 44px;
       font-weight: bold;
    }
+
+   // Center text on very small screens
+   @media (max-width: @screen-xs) {
+      text-align: center;
+
+      // Line break around abbreviations
+      abbr {
+         white-space: pre;
+         &:before,
+         &:after {
+            content: "\A";
+         }
+      }
+   }
 }
 
 
