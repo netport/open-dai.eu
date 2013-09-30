@@ -5,8 +5,11 @@ composer.phar
 
 # Composer manages Wordpress core, plugins and vendor libs
 /wordpress/
-/app/plugins/
+/app/plugins/*
 /vendor/
+
+# Some plugins are not handled by Composer
+!/app/plugins/sitepress-multilingual-cms/
 
 # Wordpress server details should never be included in version control
 .htaccess
