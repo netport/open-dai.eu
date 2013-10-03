@@ -5,7 +5,7 @@
 
 <?php
   $cmb_category_id = get_post_meta( get_the_ID(), '_cmb_category_id', true );
-  if ($cmb_category_id > -1) :
+  if (!empty($cmb_category_id) && $cmb_category_id >= 0) :
     $posts = get_posts(array(
       'category'          => $cmb_category_id,
       'posts_per_page'    => 3
