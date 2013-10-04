@@ -1,11 +1,6 @@
 <footer class="content-info container" role="contentinfo">
   <div class="row">
     <div class="col-xs-12">
-      <?php if( !is_front_page() ) : ?><a class="btn btn-sm btn-info" href="<?php echo home_url(); ?>/">Return to start page</a><br><?php endif; ?>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-12">
       <?php dynamic_sidebar('sidebar-footer'); ?>
     </div>
   </div>
