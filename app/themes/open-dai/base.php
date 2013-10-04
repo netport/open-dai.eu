@@ -34,6 +34,35 @@
       </aside><!-- /.sidebar -->
       <?php endif; ?>
     </div><!-- /.content -->
+    <?php
+    // Display a news feed on the front page
+    if (is_front_page()) :
+      $the_query = new WP_Query(array(
+        'category_name' => 'news',
+        'posts_per_page' => '6'
+      ));
+      if ( $the_query->have_posts() ) :
+    ?>
+    <div class="row">
+      <h2 class="col-xs-12 ">Project news</h2>
+      <ul class="newsfeed">
+      <?php
+        while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+        <li class="col-xs-12 newsfeed-item">
+          <?php get_template_part('templates/content-title'); ?>
+        </li>
+      <?php endwhile; ?>
+      </ul>
+      <?php $news_url = (get_option( 'show_on_front' ) == 'page' ? get_permalink( get_option('page_for_posts' ) ) : bloginfo('url')); ?>
+      <p><a class="btn btn-primary btn-lg" href="<?php echo $news_url; ?>"><?php _e('More news', 'open-dai'); ?></a></p>
+    </div>
+    <?php
+    else :
+      // no posts found
+    endif;
+    wp_reset_postdata();
+  endif;
+  ?>
   </div><!-- /.wrap -->
 
   <?php get_template_part('templates/footer'); ?>
