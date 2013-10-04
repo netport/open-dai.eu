@@ -36,8 +36,8 @@
         <td><span class="text-success"><?php _e('WP4&emsp;System/Platform implementation', 'open-dai'); ?></span></td>
       </tr>
       <tr>
-        <td>&nbsp;</td>
-        <td><?php _e('WP5&emsp;Pilot Development', 'open-dai'); ?></td>
+        <td><span class="glyphicon glyphicon-ok text-success"></td>
+        <td><span class="text-success"><?php _e('WP5&emsp;Pilot Development', 'open-dai'); ?></span></td>
       </tr>
       <tr>
         <td>&nbsp;</td>
