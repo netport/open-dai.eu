@@ -7,8 +7,8 @@
     <span class="pull-right" style="margin-left:1em;"><?php _e('Dec 2014', 'open-dai'); ?></span>
     <div class="progress progress-striped">
       <!-- total days in project: 972 -->
-      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="62" aria-valuemin="0" aria-valuemax="100" style="width: 62%;">
-        <span class="sr-only">62%</span>
+      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="62" aria-valuemin="0" aria-valuemax="100" style="width: 71%;">
+        <span class="sr-only">71%</span>
       </div>
     </div>
   </div>
