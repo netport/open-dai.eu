@@ -30,3 +30,13 @@ npm install
 grunt
 ```
 
+## Deploy
+
+SSH into the server (194.116.110.99) and update with git. Then re-build assets with grunt.
+
+```
+cd /var/www/open-dai.eu/
+git pull
+cd app/themes/open-dai/
+grunt
+```
