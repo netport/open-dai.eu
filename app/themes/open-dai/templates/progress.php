@@ -54,6 +54,6 @@
     </tbody>
   </table>
   <div class="panel-footer">
-    <a href="<?php echo get_permalink( get_page_by_path( 'project' ) ) ?>" title="<?php _e('Read more about Work Packages', 'open-dai'); ?>"><?php _e('Read more about Work Packages', 'open-dai'); ?></a>
+    <a href="<?php echo "/?page_id=108#work-packages" // get_permalink( get_page_by_path( 'project' ) ); ?>" title="<?php _e('Read more about Work Packages', 'open-dai'); ?>"><?php _e('Read more about Work Packages', 'open-dai'); ?></a>
   </div>
 </div>
