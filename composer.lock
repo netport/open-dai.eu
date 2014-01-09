@@ -3,20 +3,20 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "9a22e9ce922cede6eb184363db4bf41b",
+    "hash": "8f3809382bd31e409825a8bef747e312",
     "packages": [
         {
             "name": "composer/installers",
-            "version": "v1.0.5",
+            "version": "v1.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "v1.0.5"
+                "reference": "c87cfc35882eb50df3eef1734bfa52fbcd6c782c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/v1.0.5",
-                "reference": "v1.0.5",
+                "url": "https://api.github.com/repos/composer/installers/zipball/c87cfc35882eb50df3eef1734bfa52fbcd6c782c",
+                "reference": "c87cfc35882eb50df3eef1734bfa52fbcd6c782c",
                 "shasum": ""
             },
             "replace": {
@@ -46,19 +46,22 @@
                 {
                     "name": "Kyle Robinson Young",
                     "email": "kyle@dontkry.com",
-                    "homepage": "https://github.com/shama",
+                    "homepage": "http://dontkry.com",
                     "role": "Developer"
                 }
             ],
             "description": "A multi-framework Composer library installer",
             "homepage": "http://composer.github.com/installers/",
             "keywords": [
+                "TYPO3 CMS",
                 "TYPO3 Flow",
                 "TYPO3 Neos",
                 "agl",
                 "cakephp",
                 "codeigniter",
+                "concrete5",
                 "drupal",
+                "elgg",
                 "fuelphp",
                 "installer",
                 "joomla",
@@ -75,20 +78,20 @@
                 "wordpress",
                 "zend"
             ],
-            "time": "2013-08-07 17:25:08"
+            "time": "2013-12-24 18:04:46"
         },
         {
             "name": "fancyguy/webroot-installer",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fancyguy/webroot-installer.git",
-                "reference": "4888a3dad9ab3b3da505a149230be0ec2ab837f4"
+                "reference": "a2d5c2e149d837e5580a62a91d3c91577aa30d28"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fancyguy/webroot-installer/zipball/4888a3dad9ab3b3da505a149230be0ec2ab837f4",
-                "reference": "4888a3dad9ab3b3da505a149230be0ec2ab837f4",
+                "url": "https://api.github.com/repos/fancyguy/webroot-installer/zipball/a2d5c2e149d837e5580a62a91d3c91577aa30d28",
+                "reference": "a2d5c2e149d837e5580a62a91d3c91577aa30d28",
                 "shasum": ""
             },
             "require-dev": {
@@ -117,19 +120,19 @@
             ],
             "description": "A composer installer for libraries that live in an application webroot.",
             "homepage": "http://fancyguy.github.com/webroot-installer/",
-            "time": "2013-01-29 22:51:45"
+            "time": "2013-03-15 17:51:14"
         },
         {
             "name": "wordpress",
-            "version": "3.6",
+            "version": "3.8",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/WordPress/WordPress/archive/3.6.zip",
+                "url": "https://github.com/WordPress/WordPress/archive/3.8.zip",
                 "reference": null,
                 "shasum": null
             },
             "require": {
-                "fancyguy/webroot-installer": "1.0.0"
+                "fancyguy/webroot-installer": "1.1.0"
             },
             "type": "webroot"
         },

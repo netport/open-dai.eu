@@ -1,17 +1,20 @@
 {
+  "name": "netport/open-dai.eu",
+  "description": "Wordpress site for Open-DAI.eu",
+  "license": "MIT",
   "repositories": [
     {
       "type": "package",
       "package": {
         "name": "wordpress",
         "type": "webroot",
-        "version": "3.6",
+        "version": "3.8",
         "dist": {
           "type": "zip",
-          "url": "https://github.com/WordPress/WordPress/archive/3.6.zip"
+          "url": "https://github.com/WordPress/WordPress/archive/3.8.zip"
         },
         "require" : {
-          "fancyguy/webroot-installer": "1.0.0"
+          "fancyguy/webroot-installer": "1.1.0"
         }
       }
     },
@@ -22,9 +25,9 @@
   ],
   "require": {
     "php": ">=5.3.0",
-    "wordpress": "3.6",
-    "fancyguy/webroot-installer": "1.0.0",
-    "wpackagist/logged-in": "*"
+    "wordpress": "3.8",
+    "fancyguy/webroot-installer": "1.1.0",
+    "wpackagist/logged-in": "1.0.4"
   },
   "extra": {
     "webroot-dir": "wordpress",
