@@ -7,8 +7,8 @@
     <span class="pull-right" style="margin-left:1em;"><?php _e('Dec 2014', 'open-dai'); ?></span>
     <div class="progress progress-striped">
       <!-- total days in project: 972 -->
-      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="62" aria-valuemin="0" aria-valuemax="100" style="width: 71%;">
-        <span class="sr-only">71%</span>
+      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="62" aria-valuemin="0" aria-valuemax="100" style="width: 78%;">
+        <span class="sr-only">78%</span>
       </div>
     </div>
   </div>
@@ -20,8 +20,8 @@
     </thead>
     <tbody>
       <tr>
-        <td>&nbsp;</td>
-        <td><?php _e('WP1&emsp;Management', 'open-dai'); ?></td>
+        <td><span class="glyphicon glyphicon-tasks text-info"></span></td>
+        <td><span class="text-info"><?php _e('WP1&emsp;Management', 'open-dai'); ?></span></td>
       </tr>
       <tr>
         <td><span class="glyphicon glyphicon-ok text-success"></span></td>
@@ -36,20 +36,20 @@
         <td><span class="text-success"><?php _e('WP4&emsp;System/Platform implementation', 'open-dai'); ?></span></td>
       </tr>
       <tr>
-        <td><span class="glyphicon glyphicon-ok text-success"></td>
+        <td><span class="glyphicon glyphicon-ok text-success"></span></td>
         <td><span class="text-success"><?php _e('WP5&emsp;Pilot Development', 'open-dai'); ?></span></td>
       </tr>
       <tr>
-        <td>&nbsp;</td>
-        <td><?php _e('WP6&emsp;Services Development, implementation and testing', 'open-dai'); ?></td>
+        <td><span class="glyphicon glyphicon-ok text-success"></span></td>
+        <td><span class="text-success"><?php _e('WP6&emsp;Services Development, implementation and testing', 'open-dai'); ?></span></td>
       </tr>
       <tr>
-        <td>&nbsp;</td>
-        <td><?php _e('WP7&emsp;Dissemination', 'open-dai'); ?></td>
+        <td><span class="glyphicon glyphicon-tasks text-info"></span></td>
+        <td><span class="text-info"><?php _e('WP7&emsp;Dissemination', 'open-dai'); ?></span></td>
       </tr>
       <tr>
-        <td>&nbsp;</td>
-        <td><?php _e('WP8&emsp;Impact Evaluation and Exploitation', 'open-dai'); ?></td>
+        <td><span class="glyphicon glyphicon-tasks text-info"></span></td>
+        <td><span class="text-info"><?php _e('WP8&emsp;Impact Evaluation and Exploitation', 'open-dai'); ?></span></td>
       </tr>
     </tbody>
   </table>
