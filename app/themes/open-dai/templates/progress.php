@@ -7,8 +7,8 @@
     <span class="pull-right" style="margin-left:1em;"><?php _e('Dec 2014', 'open-dai'); ?></span>
     <div class="progress progress-striped">
       <!-- total days in project: 972 -->
-      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="62" aria-valuemin="0" aria-valuemax="100" style="width: 78%;">
-        <span class="sr-only">78%</span>
+      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="62" aria-valuemin="0" aria-valuemax="100" style="width: 81%;">
+        <span class="sr-only">81%</span>
       </div>
     </div>
   </div>
@@ -40,8 +40,8 @@
         <td><span class="text-success"><?php _e('WP5&emsp;Pilot Development', 'open-dai'); ?></span></td>
       </tr>
       <tr>
-        <td><span class="glyphicon glyphicon-ok text-success"></span></td>
-        <td><span class="text-success"><?php _e('WP6&emsp;Services Development, implementation and testing', 'open-dai'); ?></span></td>
+        <td><span class="glyphicon glyphicon-tasks text-info"></span></td>
+        <td><span class="text-info"><?php _e('WP6&emsp;Services Development, implementation and testing', 'open-dai'); ?></span></td>
       </tr>
       <tr>
         <td><span class="glyphicon glyphicon-tasks text-info"></span></td>
