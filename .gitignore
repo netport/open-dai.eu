@@ -12,6 +12,7 @@ composer.phar
 # Some plugins are not handled by Composer
 !/app/plugins/sitepress-multilingual-cms/
 !/app/plugins/wpml-string-translation/
+!/app/plugins/wp-tinyletter-widget
 
 # Wordpress server details should never be included in version control
 .htaccess
