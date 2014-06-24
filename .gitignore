@@ -6,6 +6,7 @@ composer.phar
 # Composer manages Wordpress core, plugins and vendor libs
 /wordpress/
 /app/plugins/*
+/app/uploads/
 /vendor/
 
 # Some plugins are not handled by Composer
