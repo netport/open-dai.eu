@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "05157d06f204df3df83e7886f581d758",
+    "hash": "05023be94566b4f78ab48d12dd124b07",
     "packages": [
         {
             "name": "composer/installers",
@@ -217,15 +217,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-mail-smtp",
-            "version": "0.9.4",
+            "version": "0.9.5",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/wp-mail-smtp/",
-                "reference": "tags/0.9.4"
+                "reference": "tags/0.9.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/wp-mail-smtp.0.9.4.zip",
+                "url": "http://downloads.wordpress.org/plugin/wp-mail-smtp.0.9.5.zip",
                 "reference": null,
                 "shasum": null
             },
