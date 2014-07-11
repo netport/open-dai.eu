@@ -4,29 +4,28 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6e305df80fae00ba648597972ee5be18",
+    "hash": "05157d06f204df3df83e7886f581d758",
     "packages": [
         {
             "name": "composer/installers",
-            "version": "v1.0.15",
+            "version": "v1.0.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "8e6a72a78f6cfd537fde3350720dfdc9ae3c5621"
+                "reference": "4127333b03e8b4c08d081958548aae5419d1a2fa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/8e6a72a78f6cfd537fde3350720dfdc9ae3c5621",
-                "reference": "8e6a72a78f6cfd537fde3350720dfdc9ae3c5621",
+                "url": "https://api.github.com/repos/composer/installers/zipball/4127333b03e8b4c08d081958548aae5419d1a2fa",
+                "reference": "4127333b03e8b4c08d081958548aae5419d1a2fa",
                 "shasum": ""
             },
             "replace": {
-                "roundcube/plugin-installer": "*",
                 "shama/baton": "*"
             },
             "require-dev": {
                 "composer/composer": "1.0.*@dev",
-                "phpunit/phpunit": "4.1.*"
+                "phpunit/phpunit": "3.7.*"
             },
             "type": "composer-installer",
             "extra": {
@@ -48,7 +47,7 @@
                 {
                     "name": "Kyle Robinson Young",
                     "email": "kyle@dontkry.com",
-                    "homepage": "https://github.com/shama",
+                    "homepage": "http://dontkry.com",
                     "role": "Developer"
                 }
             ],
@@ -56,14 +55,12 @@
             "homepage": "http://composer.github.com/installers/",
             "keywords": [
                 "Craft",
-                "Dolibarr",
                 "Hurad",
                 "MODX Evo",
                 "OXID",
                 "WolfCMS",
                 "agl",
                 "annotatecms",
-                "bitrix",
                 "cakephp",
                 "codeigniter",
                 "concrete5",
@@ -80,11 +77,9 @@
                 "mako",
                 "mediawiki",
                 "modulework",
-                "moodle",
                 "phpbb",
                 "piwik",
                 "ppi",
-                "roundcube",
                 "shopware",
                 "silverstripe",
                 "symfony",
@@ -93,7 +88,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2014-06-23 16:25:28"
+            "time": "2014-02-24 04:21:34"
         },
         {
             "name": "fancyguy/webroot-installer",
@@ -128,7 +123,7 @@
             ],
             "authors": [
                 {
-                    "name": "Steve Buzonas",
+                    "name": "Steve Buzonas (slbmeh)",
                     "email": "steve@fancyguy.com",
                     "homepage": "http://www.stevebuzonas.com"
                 }
@@ -138,11 +133,57 @@
             "time": "2013-03-15 17:51:14"
         },
         {
-            "name": "wordpress",
+            "name": "vlucas/phpdotenv",
+            "version": "1.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vlucas/phpdotenv.git",
+                "reference": "2821c024b4c14c7e6d1ff99e063ae9532620beb2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/2821c024b4c14c7e6d1ff99e063ae9532620beb2",
+                "reference": "2821c024b4c14c7e6d1ff99e063ae9532620beb2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Dotenv": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD"
+            ],
+            "authors": [
+                {
+                    "name": "Vance Lucas",
+                    "email": "vance@vancelucas.com",
+                    "homepage": "http://www.vancelucas.com"
+                }
+            ],
+            "description": "Loads environment variables from `.env` to `getenv()`, `$_ENV` and `$_SERVER` automagically.",
+            "homepage": "http://github.com/vlucas/phpdotenv",
+            "keywords": [
+                "dotenv",
+                "env",
+                "environment"
+            ],
+            "time": "2014-01-31 16:18:39"
+        },
+        {
+            "name": "wordpress/wordpress",
             "version": "3.9.1",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/WordPress/WordPress/archive/3.9.1.zip",
+                "url": "https://wordpress.org/wordpress-3.9.1.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -152,8 +193,13 @@
             "type": "webroot"
         },
         {
-            "name": "wpackagist/logged-in",
+            "name": "wpackagist-plugin/logged-in",
             "version": "1.0.4",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/logged-in/",
+                "reference": "tags/1.0.4"
+            },
             "dist": {
                 "type": "zip",
                 "url": "http://downloads.wordpress.org/plugin/logged-in.1.0.4.zip",
@@ -163,11 +209,14 @@
             "require": {
                 "composer/installers": "~1.0"
             },
+            "replace": {
+                "wpackagist/logged-in": "self.version"
+            },
             "type": "wordpress-plugin",
-            "homepage": "http://wordpress.org/extend/plugins/logged-in"
+            "homepage": "http://wordpress.org/plugins/logged-in/"
         },
         {
-            "name": "wpackagist/wp-mail-smtp",
+            "name": "wpackagist-plugin/wp-mail-smtp",
             "version": "0.9.4",
             "source": {
                 "type": "svn",
@@ -182,6 +231,9 @@
             },
             "require": {
                 "composer/installers": "~1.0"
+            },
+            "replace": {
+                "wpackagist/wp-mail-smtp": "self.version"
             },
             "type": "wordpress-plugin",
             "homepage": "http://wordpress.org/plugins/wp-mail-smtp/"
@@ -198,7 +250,7 @@
 
     ],
     "platform": {
-        "php": ">=5.3.0"
+        "php": ">=5.3.2"
     },
     "platform-dev": [
 

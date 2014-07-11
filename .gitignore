@@ -1,23 +1,30 @@
+# WordPress
+web/wp
+web/.htaccess
 
-# Composer binary
-# Not included in project but could be present for some users
-composer.phar
+# WP-CLI
+db-sync
+sql-dump-*.sql
 
-# Composer manages Wordpress core, plugins and vendor libs
-/wordpress/
-/app/plugins/*
-/app/uploads/
-/vendor/
+# Dotenv
+.env
+.env.*
+!.env.example
 
-# Some plugins are not handled by Composer
-!/app/plugins/sitepress-multilingual-cms/
-!/app/plugins/wpml-string-translation/
-!/app/plugins/wp-tinyletter-widget
+# Application
+web/app/plugins/*
+!web/app/plugins/.gitkeep
+!web/app/plugins/sitepress-multilingual-cms
+!web/app/plugins/wp-tinyletter-widget
+!web/app/plugins/wpml-string-translation
 
-# Wordpress server details should never be included in version control
-.htaccess
-wp-config.php
+web/app/upgrade
+web/app/uploads/*
+!web/app/uploads/.gitkeep
 
-# Generated resources are ignored
-main.min.css
-scripts.min.js
+# Vendor (e.g. Composer)
+vendor/*
+!vendor/.gitkeep
+
+# Node Package Manager
+node_modules

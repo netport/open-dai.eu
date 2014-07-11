@@ -1,40 +1,67 @@
 {
   "name": "netport/open-dai.eu",
-  "description": "Wordpress site for Open-DAI.eu",
+  "type": "website",
   "license": "MIT",
+  "description": "Wordpress site for Open-DAI.eu",
+  "authors": [
+    {
+      "name": "Fredrik Broman",
+      "email": "frebro@gmail.com",
+      "homepage": "https://github.com/frebro"
+    }
+  ],
+  "keywords": [
+    "wordpress", "stack", "capistrano", "composer", "vagrant", "wp"
+  ],
+  "support": {
+    "issues": "https://github.com/netport/open-dai.eu/issues"
+  },
+  "config": {
+    "preferred-install": "dist",
+    "generate-salts": true
+  },
+  "autoload": {
+    "psr-0": {"Bedrock\\Installer": "scripts"}
+  },
+  "scripts": {
+    "post-root-package-install": ["Bedrock\\Installer::addSalts"]
+  },
   "repositories": [
+    {
+      "type": "composer",
+      "url": "http://wpackagist.org"
+    },
     {
       "type": "package",
       "package": {
-        "name": "wordpress",
-        "type": "webroot",
+        "name": "wordpress/wordpress",
         "version": "3.9.1",
+        "type": "webroot",
         "dist": {
           "type": "zip",
-          "url": "https://github.com/WordPress/WordPress/archive/3.9.1.zip"
+          "url": "https://wordpress.org/wordpress-3.9.1.zip"
         },
         "require" : {
           "fancyguy/webroot-installer": "1.1.0"
         }
       }
-    },
-    {
-      "type": "composer",
-      "url": "http://wpackagist.org"
     }
   ],
   "require": {
-    "php": ">=5.3.0",
-    "wordpress": "3.9.1",
+    "php": ">=5.3.2",
+    "wordpress/wordpress": "3.9.1",
     "fancyguy/webroot-installer": "1.1.0",
-    "wpackagist/logged-in": "1.0.4",
-    "wpackagist/wp-mail-smtp": "0.9.4"
+    "composer/installers": "v1.0.12",
+    "vlucas/phpdotenv": "~1.0.6",
+    "wpackagist-plugin/logged-in": "1.0.4",
+    "wpackagist-plugin/wp-mail-smtp": "0.9.4"
   },
   "extra": {
-    "webroot-dir": "wordpress",
-    "webroot-package": "wordpress",
     "installer-paths": {
-      "app/plugins/{$name}/": ["type:wordpress-plugin"]
-    }
+      "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
+      "web/app/themes/{$name}/": ["type:wordpress-theme"]
+    },
+    "webroot-dir": "web/wp",
+    "webroot-package": "wordpress/wordpress"
   }
 }
