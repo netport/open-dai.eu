@@ -54,7 +54,8 @@
     "composer/installers": "v1.0.12",
     "vlucas/phpdotenv": "~1.0.6",
     "wpackagist-plugin/logged-in": "1.0.4",
-    "wpackagist-plugin/wp-mail-smtp": "0.9.5"
+    "wpackagist-plugin/wp-mail-smtp": "0.9.5",
+    "wpackagist-plugin/advanced-custom-fields": "4.3.8"
   },
   "extra": {
     "installer-paths": {
