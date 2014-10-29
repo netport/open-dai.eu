@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4a3ac7402bf6628fa6b94a50f3433ea2",
+    "hash": "4022c0c12743d95974231fee0a64b957",
     "packages": [
         {
             "name": "composer/installers",
@@ -199,7 +199,7 @@
         },
         {
             "name": "wpackagist-plugin/advanced-custom-fields",
-            "version": "4.3.8",
+            "version": "4.3.9",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/advanced-custom-fields/",
