@@ -1,28 +1,30 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" <?php language_attributes(); ?>> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" <?php language_attributes(); ?>> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" <?php language_attributes(); ?>> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
+<!doctype html>
+<html class="no-js" <?php language_attributes(); ?>>
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title><?php wp_title('|', true, 'right'); ?></title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <?php wp_head(); ?>
 
-  <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7770232/658242/css/fonts.css">
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '566674693434124',
+        xfbml      : true,
+        version    : 'v2.1'
+      });
+    };
 
-  <link rel="shortcut icon" href="/<?php echo THEME_PATH; ?>/assets/img/favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" href="/<?php echo THEME_PATH; ?>/assets/img/apple-touch-icon.png">
-  <link rel="apple-touch-icon" sizes="57x57" href="/<?php echo THEME_PATH; ?>/assets/img/apple-touch-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="/<?php echo THEME_PATH; ?>/assets/img/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="/<?php echo THEME_PATH; ?>/assets/img/apple-touch-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="/<?php echo THEME_PATH; ?>/assets/img/apple-touch-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="57x57" href="/<?php echo THEME_PATH; ?>/assets/img/apple-touch-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="/<?php echo THEME_PATH; ?>/assets/img/apple-touch-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="/<?php echo THEME_PATH; ?>/assets/img/apple-touch-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="/<?php echo THEME_PATH; ?>/assets/img/apple-touch-icon-152x152.png">
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "//connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+  </script>
 
-
-  <link rel="alternate" type="application/rss+xml" title="<?php echo get_bloginfo('name'); ?> Feed" href="<?php echo home_url(); ?>/feed/">
+  <link rel="alternate" type="application/rss+xml" title="<?php echo get_bloginfo('name'); ?> Feed" href="<?php echo esc_url(get_feed_link()); ?>">
 </head>

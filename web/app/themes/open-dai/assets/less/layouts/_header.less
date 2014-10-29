@@ -1,0 +1,53 @@
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.banner {
+
+   background-color: @jumbotron-bg;
+   border-bottom-color: @jumbotron-bg;
+
+   // Logotype in navbar
+   .navbar-brand {
+      padding-left: (@navbar-padding-horizontal + @logo-size + @padding-small-horizontal);
+
+      background: url('../img/open-dai-symbol.png') @navbar-padding-horizontal center no-repeat;
+      background-size: @logo-size;
+   }
+
+   // Float navigation to the right on large screens
+   @media (min-width: @screen-sm) {
+      nav {
+         .pull-right;
+      }
+   }
+
+}
+
+// Response to hero overlap
+.banner.js-hero-overlap {
+
+   // Animate background color
+   &.navbar-default {
+      background-color: transparent;
+      border-bottom-color: transparent;
+   }
+}
+
+// Animation in response to hero visibility
+html.cssanimations .banner {
+
+   // Animate logo
+   .navbar-brand {
+      .transition(~'color 120ms ease-in-out, padding-left 120ms ease-in-out, background-position 120ms ease-in-out');
+   }
+
+   &.js-hero-visible {
+      .navbar-brand {
+         color: transparent;
+         padding-left: @navbar-padding-horizontal;
+         background-position: -@logo-size center;
+      }
+   }
+}

@@ -1,0 +1,15 @@
+
+// Make space for fixed top navbar and WP adminbar
+body {
+  padding-top: @navbar-height;
+  &.admin-bar .navbar-fixed-top { top: @wp-adminbar-height; }
+}
+
+// Content wrapper
+.wrap { }
+
+// Main content area
+.main {
+  margin-top: (2 * @line-height-computed);
+  margin-bottom: (6 * @line-height-computed);
+}

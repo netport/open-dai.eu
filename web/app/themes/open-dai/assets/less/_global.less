@@ -1,0 +1,37 @@
+
+//== Positioning classes
+//
+
+.absolute     { position: absolute; }
+.relative     { position: relative; }
+.static       { position: static; }
+
+.pin-bottom   { bottom: 0; }
+.pin-top      { top: 0; }
+.pin-left     { left: 0; }
+.pin-right    { right: 0; }
+
+
+//== Spacing classes
+//
+
+.margin-top-xs      { margin-top: .5 * @line-height-computed; }
+.margin-bottom-xs   { margin-bottom: .5 * @line-height-computed; }
+
+.margin-top-sm      { margin-top: @line-height-computed; }
+.margin-bottom-sm   { margin-bottom: @line-height-computed; }
+
+.margin-top-md      { margin-top: 2 * @line-height-computed; }
+.margin-bottom-md   { margin-bottom: 2 * @line-height-computed; }
+
+.margin-top-lg      { margin-top: 3 * @line-height-computed; }
+.margin-bottom-lg   { margin-bottom: 3 * @line-height-computed; }
+
+
+//== Positioning classes
+//
+
+.block-xs { @media (max-width: @screen-xs-max) { display: block; } }
+.block-sm { @media (max-width: @screen-sm-max) { display: block; } }
+.block-md { @media (max-width: @screen-md-max) { display: block; } }
+

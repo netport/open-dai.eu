@@ -1,0 +1,18 @@
+
+// Jumbotron links
+.jumbotron a {
+  color: @jumbotron-link-color;
+  &:hover, &:focus { color: @jumbotron-link-hover-color; text-decoration: none; }
+}
+
+// Jumbotron pills nav
+.jumbotron .nav > li > a {
+  border: 1px solid lighten(@jumbotron-bg, 6.5%);
+  margin-left: .5 * @grid-gutter-width;
+  margin-right: .5 * @grid-gutter-width;
+
+  // Animated background
+  background-color: transparent;
+  .transition(~'background-color 90ms ease-in-out');
+  &:hover, &:focus { background-color: lighten(@jumbotron-bg, 6.5%); }
+}

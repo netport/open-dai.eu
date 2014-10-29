@@ -1,0 +1,48 @@
+
+//== Hero
+//
+//##
+
+.jumbotron {
+  // Responsive background pattern
+  background-image: url('../img/hero-bg.png');
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  // Place underneath navbar
+  margin-top: -@navbar-height;
+  .container { margin-top: @navbar-height; }
+
+  // Remove default bottom margin
+  margin-bottom: 0;
+
+  // Push lead text down
+  .lead {
+    margin-top: @line-height-computed;
+  }
+}
+
+//== Newslist
+//
+//##
+
+.news-list {
+  margin-top: (2 * @line-height-computed);
+
+  h2 { margin-bottom: @line-height-computed; }
+  .entry-summary { .hide(); }
+}
+
+
+//== Social embeds
+//
+//##
+
+.social-embeds {
+  margin-top: (2 * @line-height-computed);
+
+  h2 { margin-bottom: @line-height-computed; }
+
+  .fb-like-box { &, * { width: 100% !important; } }
+}

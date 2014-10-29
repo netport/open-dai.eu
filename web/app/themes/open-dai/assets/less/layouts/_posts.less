@@ -1,0 +1,46 @@
+.hentry header {
+  margin-bottom: (2 * @line-height-computed);
+}
+
+.hentry time {
+  color: @text-muted;
+}
+
+.hentry .byline {
+  &, a {
+    color: @text-muted;
+  }
+}
+
+.entry-summary {
+  font-size: @font-size-small;
+}
+
+.hentry .entry-content { }
+.hentry footer { }
+
+/* ==========================================================================
+   Post/news list
+   ========================================================================== */
+
+.post-list {
+  .list-unstyled;
+
+  .list-title {
+    margin-bottom: @line-height-computed;
+  }
+
+  .hentry {
+    border-bottom: 1px solid @hr-border;
+    margin-bottom: @padding-large-vertical;
+    padding-bottom: @padding-large-vertical;
+  }
+
+  .hentry header {
+    margin-bottom: @padding-base-vertical;
+  }
+
+  .entry-title {
+    .h4;
+  }
+}
