@@ -12,7 +12,7 @@ ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 # This could be overridden in a stage config file
 # set :branch, :master
 
-set :log_level, :debug
+set :log_level, :info
 
 set :linked_files, %w{.env web/.htaccess}
 set :linked_dirs, %w{web/app/uploads web/app/upgrade}
@@ -27,6 +27,4 @@ namespace :deploy do
   end
 end
 
-# The above restart task is not run by default
-# Uncomment the following line to run it on deploys if needed
 after 'deploy:publishing', 'deploy:chown'
