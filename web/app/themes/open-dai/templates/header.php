@@ -1,5 +1,5 @@
 <?php
-  $navbar_classes = ['navbar', 'navbar-default', 'navbar-fixed-top'];
+  $navbar_classes = array('navbar', 'navbar-default', 'navbar-fixed-top');
 
   // Add js hook for front page hero
   if (is_front_page()) {
