@@ -27,13 +27,13 @@ set :grunt_file, -> { release_path.join('web/app/themes/open-dai/Gruntfile.js') 
 set :grunt_tasks, 'build'
 after 'bower:install', 'grunt'
 
-# namespace :deploy do
-#   desc 'Change ownership of deployed files to server user'
-#   task :chown do
-#     on roles(:app), in: :sequence, wait: 5 do
-#       execute :chown, "-R apache:apache #{release_path}"
-#       execute :chown, "-R apache:apache #{current_path}"
-#     end
-#   end
-# end
-# after 'deploy:publishing', 'deploy:chown'
+namespace :deploy do
+  desc 'Change ownership of deployed files to server user'
+  task :chown do
+    on roles(:app), in: :sequence, wait: 5 do
+      execute :chown, "-R apache:apache #{release_path}"
+      execute :chown, "-R apache:apache #{current_path}"
+    end
+  end
+end
+after 'deploy:publishing', 'deploy:chown'
