@@ -18,7 +18,7 @@ set :linked_files, %w{.env web/.htaccess}
 set :linked_dirs, %w{web/app/uploads web/app/upgrade}
 
 set :npm_target_path, -> { release_path.join('web/app/themes/open-dai') }
-set :npm_flags, '--silent'
+set :npm_flags, '--silent --allow-root'
 
 set :grunt_file, -> { release_path.join('web/app/themes/open-dai/Gruntfile.js') }
 set :grunt_tasks, 'build'
