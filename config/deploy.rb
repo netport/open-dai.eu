@@ -12,19 +12,25 @@ ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 # This could be overridden in a stage config file
 # set :branch, :master
 
-set :log_level, :info
+set :log_level, :debug
 
 set :linked_files, %w{.env web/.htaccess}
 set :linked_dirs, %w{web/app/uploads web/app/upgrade}
 
-namespace :deploy do
-  desc 'Change ownership of deployed files to server user'
-  task :chown do
-    on roles(:app), in: :sequence, wait: 5 do
-      execute :chown, "-R apache:apache #{release_path}"
-      execute :chown, "-R apache:apache #{current_path}"
-    end
-  end
-end
+set :npm_target_path, -> { release_path.join('web/app/themes/open-dai') }
+set :npm_flags, '--silent'
 
-after 'deploy:publishing', 'deploy:chown'
+set :grunt_file, -> { release_path.join('web/app/themes/open-dai/Gruntfile.js') }
+set :grunt_tasks, 'build'
+before 'deploy:updated', 'grunt'
+
+# namespace :deploy do
+#   desc 'Change ownership of deployed files to server user'
+#   task :chown do
+#     on roles(:app), in: :sequence, wait: 5 do
+#       execute :chown, "-R apache:apache #{release_path}"
+#       execute :chown, "-R apache:apache #{current_path}"
+#     end
+#   end
+# end
+# after 'deploy:publishing', 'deploy:chown'
