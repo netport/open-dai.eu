@@ -12,7 +12,7 @@ ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 # This could be overridden in a stage config file
 # set :branch, :master
 
-set :log_level, :debug
+set :log_level, :error
 
 set :linked_files, %w{.env web/.htaccess}
 set :linked_dirs, %w{web/app/uploads web/app/upgrade}
@@ -20,9 +20,12 @@ set :linked_dirs, %w{web/app/uploads web/app/upgrade}
 set :npm_target_path, -> { release_path.join('web/app/themes/open-dai') }
 set :npm_flags, '--silent --allow-root'
 
+set :bower_target_path, -> { release_path.join('web/app/themes/open-dai') }
+set :bower_flags, '--quiet --allow-root'
+
 set :grunt_file, -> { release_path.join('web/app/themes/open-dai/Gruntfile.js') }
 set :grunt_tasks, 'build'
-before 'deploy:updated', 'grunt'
+after 'bower:install', 'grunt'
 
 # namespace :deploy do
 #   desc 'Change ownership of deployed files to server user'

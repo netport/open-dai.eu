@@ -7,4 +7,5 @@ require 'capistrano/deploy'
 # Load tasks from gems
 require 'capistrano/composer'
 require 'capistrano/npm'
+require 'capistrano/bower'
 require 'capistrano/grunt'
