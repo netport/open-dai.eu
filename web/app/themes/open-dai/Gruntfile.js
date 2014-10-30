@@ -115,8 +115,8 @@ module.exports = function(grunt) {
           length: 32,
           manifest: 'assets/manifest.json',
           querystring: {
-            style: 'open-dai_css',
-            script: 'open-dai_js'
+            style: 'roots_css',
+            script: 'roots_js'
           }
         },
         files: {
@@ -143,7 +143,7 @@ module.exports = function(grunt) {
         // Browser live reloading
         // https://github.com/gruntjs/grunt-contrib-watch#live-reloading
         options: {
-          livereload: true
+          livereload: false
         },
         files: [
           'assets/css/main.css',
