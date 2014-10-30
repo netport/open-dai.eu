@@ -18,7 +18,7 @@ set :linked_files, %w{.env web/.htaccess}
 set :linked_dirs, %w{web/app/uploads web/app/upgrade}
 
 set :npm_target_path, -> { release_path.join('web/app/themes/open-dai') }
-set :npm_flags, '--silent --allow-root'
+set :npm_flags, '--silent'
 
 set :bower_target_path, -> { release_path.join('web/app/themes/open-dai') }
 set :bower_flags, '--quiet --allow-root'
