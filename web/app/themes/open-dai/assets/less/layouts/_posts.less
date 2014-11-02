@@ -1,5 +1,9 @@
 .hentry header {
-  margin-bottom: (2 * @line-height-computed);
+  margin-bottom: @padding-base-vertical;
+
+  body.single & {
+    margin-bottom: (2 * @line-height-computed);
+  }
 }
 
 .hentry time {
@@ -36,9 +40,7 @@
     padding-bottom: @padding-large-vertical;
   }
 
-  .hentry header {
-    margin-bottom: @padding-base-vertical;
-  }
+  .hentry header { }
 
   .entry-title {
     .h4;
