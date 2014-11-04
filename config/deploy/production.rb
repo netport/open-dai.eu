@@ -8,7 +8,7 @@ set :stage, :production
 
 # Extended Server Syntax
 # ======================
-set :deploy_to, "/var/www/open-dai.eu"
+set :deploy_to, "/var/www/open-dai.eu-v2"
 server 'open-dai.eu', user: 'root', roles: %w{web app db}
 
 # you can set custom ssh options
